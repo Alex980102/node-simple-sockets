@@ -14,9 +14,16 @@ const io = require('socket.io')(server);
 /* Socket Messages */
 io.on('connection', client => {
     console.log('Cliente conectado');
-    client.on('disconnect', ()=>{
+    client.on('disconnect', () => {
         console.log('Cliente Desconectado');
     });
+
+    client.on('mensaje', (payload) => {
+        console.log('Mensaje', payload.nombre);
+        io.emit('mensaje', {
+            admin: 'nuevo Mensaje'
+        });
+    })
 });
 /* Socket Messages */
 
@@ -26,7 +33,7 @@ const publicPath = path.resolve(__dirname, 'public');
 app.use(express.static(publicPath));
 
 
-server.listen(parseInt(process.env.PORT), (err) =>{
-    if(err) throw new Error(err);
+server.listen(parseInt(process.env.PORT), (err) => {
+    if (err) throw new Error(err);
     console.log('Servidor corriendo en el puerto', parseInt(process.env.PORT));
 });
