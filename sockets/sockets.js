@@ -4,12 +4,10 @@ const Bands = require('../models/bands');
 
 const bands = new Bands();
 
-bands.addBand(new Band('Queen'));
-bands.addBand(new Band('Bon Jovi'));
-bands.addBand(new Band('Heroes del silencio'));
-bands.addBand(new Band('Pink Floyd'));
-bands.addBand(new Band('Mozart'));
-bands.addBand(new Band('Chopin'));
+bands.addBand(new Band('Felipe Calderon'));
+bands.addBand(new Band('Andres Manuel'));
+bands.addBand(new Band('Carlos Huerta'));
+bands.addBand(new Band('Miguel Alemán'));
 
 /* Socket Messages */
 io.on('connection', client => {
