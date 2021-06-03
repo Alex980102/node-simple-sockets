@@ -35061,7 +35061,7 @@ D.iS.prototype={
 gjm:function(){var s=this.b
 return s==null?H.d(H.p("_socket")):s},
 Z2:function(){var s=this
-s.b=U.aui("http://192.168.0.108:3001",P.a0(["transports",H.a(["websocket"],t.s),"autoConnect",!0],t.N,t.K))
+s.b=U.aui("https://flutter-socket-server22.herokuapp.com/",P.a0(["transports",H.a(["websocket"],t.s),"autoConnect",!0],t.N,t.K))
 s.gjm().ek(0,"connect",new D.a0M(s))
 s.gjm().ek(0,"disconnect",new D.a0N(s))},
 $iag:1}
